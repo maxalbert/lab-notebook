@@ -74,5 +74,5 @@ FILENAME=markdown_notes/notes_${TODAY}.md
 
 echo "## ${TODAY}" >> $FILENAME
 git add $FILENAME
-$NOTES_EDITOR $FILENAME
+$LAB_NOTES_EDITOR $FILENAME
 ```
