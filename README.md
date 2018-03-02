@@ -13,11 +13,15 @@ My key considerations were:
 - One file per day, accumulate into 
 - Easy conversion to reasonably pretty pdf
 
-## Requirements
+## Prerequisites
 
 - Text editor with Markdown support (e.g. Sublime Text with a Markdown plugin)
+
 - [asciidoctor-pdf](https://github.com/asciidoctor/asciidoctor-pdf)
   _TODO: Add some installation info on Mac OS X_
+
+  **Note:** Installing ruby via Homebrew caused problems for me on Mac OS X. I found [these instructions](http://usabilityetc.com/articles/ruby-on-mac-os-x-with-rvm/) by Jeffrey Morgan to install Ruby via `rvm` (the ruby version manager) very helpful (I think I just used the commands in section "Installing RVM and Ruby").
+
 - `pdfnup` (to create a two-sided version of the pdf - I find this easier to read at a glance for longer documents)
 
 ## Workflow
