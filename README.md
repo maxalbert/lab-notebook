@@ -60,11 +60,15 @@ Add the following script as `~/.local/bin/nn` (or any other location that's pick
 # It creates a skeleton file for the notes of the current day,
 # adds it to version control and opens it in an editor.
 
-EDITOR=subl
+# Define text editor to use for editing lab notebook files.
+# This can be overridden by the LAB_NOTES_EDITOR environment
+# variable. If it isn't set, use the value of EDITOR, or fall
+# back to Sublime Text if neither is defined.
+LAB_NOTES_EDITOR=${LAB_NOTES_EDITOR:=${EDITOR:=subl}}
 TODAY=$(date +%Y-%m-%d)
 FILENAME=markdown_notes/notes_${TODAY}.md
 
 echo "## ${TODAY}" >> $FILENAME
 git add $FILENAME
-$EDITOR $FILENAME
+$NOTES_EDITOR $FILENAME
 ```
