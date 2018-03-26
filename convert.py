@@ -47,6 +47,15 @@ def replace_section_markers(line):
     return line
 
 
+def replace_gh_flavoured_markdown_links(line):
+    """
+    Replace any hyperlinks in Github-flavoured markdown style with Asciidoc ones.
+    """
+    ghfm_link_pattern = '\[(.*?)\]\((.*?)\)'
+    asciidoc_replacement_pattern = '\\2[\\1]'
+    return re.sub(ghfm_link_pattern, asciidoc_replacement_pattern, line)
+
+
 if __name__ == '__main__':
     try:
         filenames = sys.argv[1:]
@@ -60,6 +69,7 @@ if __name__ == '__main__':
         for infile in filenames:
             for line in open(infile, 'r').readlines():
                 line = replace_section_markers(line)
+                line = replace_gh_flavoured_markdown_links(line)
                 f.write(line)
             f.write('\n\n<<<\n\n')
 
