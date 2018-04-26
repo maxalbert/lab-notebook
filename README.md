@@ -24,15 +24,34 @@ My key considerations were:
 
 - `pdfnup` (to create a two-sided version of the pdf - I find this easier to read at a glance for longer documents)
 
+- Ensure the auxiliary script below is visible in your path, in order to make the command `nn` available (which creates a new note).
+
+
 ## Workflow
 
-At the start of a project, create a new lab notebook skeleton (basically, copy the files and folders from this repo). _(In the future I may consider turning this into a [cookiecutter](https://github.com/audreyr/cookiecutter) template if it turns out to be useful enough.)_
+### At the start of a project
 
-For daily use:
+_Note: In the future I may consider turning this into a [cookiecutter](https://github.com/audreyr/cookiecutter) template to automate these steps, if it turns out to be useful enough._
 
-- Change into to the lab notebook folder for a project
+(i) Clone this repo to create a new lab notebook skeleton and get rid of the existing git history.
+```
+$ git clone https://github.com/maxalbert/lab-notebook.git
+$ cd lab-notebook
+$ rm -rf .git
+```
 
-- Type `nn` (for "new note") (this requires the script below to be accessible in your PATH)
+(ii) Edit `convert.py` and change the project title.
+
+(iii) Re-initialise a fresh git repo for the notebook and create an initial commit.
+```
+$ git init
+$ git add .
+$ git commit -m "Lab notebook for <project>: initial commit"
+```
+
+### For daily use:
+
+- From within the lab notebook folder, type `nn` (for "new note") (this requires the script below to be accessible in your PATH)
 
   This will create a new file for the current date (with a heading reading `## YYYY-MM-DD`), add it to version control and open it in your editor.
 
