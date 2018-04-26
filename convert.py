@@ -22,7 +22,7 @@ import textwrap
 OUTFILE = "merged.adoc"
 
 preamble = textwrap.dedent("""
-    = Lab notebook: BI Tool Project
+    = Lab notebook: My Awesome Project
     Maximilian Albert
     Version 0.1, started 13.2.2018
     :toc:
