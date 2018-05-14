@@ -91,7 +91,9 @@ LAB_NOTES_EDITOR=${LAB_NOTES_EDITOR:=${EDITOR:=subl}}
 TODAY=$(date +%Y-%m-%d)
 FILENAME=markdown_notes/notes_${TODAY}.md
 
-echo "## ${TODAY}" >> $FILENAME
-git add $FILENAME
+if ! [ -e ${FILENAME} ]; then
+   echo "## ${TODAY}" >> $FILENAME
+   git add $FILENAME
+fi
 $LAB_NOTES_EDITOR $FILENAME
 ```
