@@ -93,7 +93,20 @@ FILENAME=markdown_notes/notes_${TODAY}.md
 
 if ! [ -e ${FILENAME} ]; then
    echo "## ${TODAY}" >> $FILENAME
-   git add $FILENAME
+   echo "" >> $FILENAME
+   echo "### Work done today" >> $FILENAME
+   echo "" >> $FILENAME
+   echo "- ..." >> $FILENAME
+   echo "" >> $FILENAME
+   echo "" >> $FILENAME
+   echo "### Unexpected sidetracks" >> $FILENAME
+   echo "" >> $FILENAME
+   echo "None so far." >> $FILENAME
+   echo "" >> $FILENAME
+   echo "" >> $FILENAME
+   echo "### CHANGEME" >> $FILENAME
+   echo "" >> $FILENAME
+  git add $FILENAME
 fi
 $LAB_NOTES_EDITOR $FILENAME
 ```
