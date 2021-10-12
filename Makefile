@@ -10,7 +10,8 @@ pdf:
 	./convert.py markdown_notes/notes_*.md \
 	    && asciidoctor-pdf merged.adoc -o $(OUTPUT_PDF) \
 	    && pdfnup --nup 2x1 --suffix 2x1 $(OUTPUT_PDF) \
-	    && rm merged.adoc
+	    && rm merged.adoc \
+	    && true
 	@echo "Output written to file '$(OUTPUT_PDF)'."
 
 # Re-create the file notes_today.pdf every second
@@ -26,7 +27,8 @@ notes-today: $(NOTES_TODAY_PDF)
 $(NOTES_TODAY_PDF): $(NOTES_TODAY)
 	./convert.py $(NOTES_TODAY) \
 		&& asciidoctor-pdf merged.adoc -o $(NOTES_TODAY_PDF) \
-		&& rm merged.adoc
+		&& rm merged.adoc \
+	        && true
 
 html:
 	pandoc markdown_notes/notes*.md -f markdown -t html -s -o $(OUTPUT_HTML)
