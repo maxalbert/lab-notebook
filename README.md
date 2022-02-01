@@ -21,6 +21,8 @@ My key considerations were:
   _TODO: Add some installation info on Mac OS X_
 
   **Note:** Installing ruby via Homebrew caused problems for me on Mac OS X. I found [these instructions](http://usabilityetc.com/articles/ruby-on-mac-os-x-with-rvm/) by Jeffrey Morgan to install Ruby via `rvm` (the ruby version manager) very helpful (I think I just used the commands in section "Installing RVM and Ruby").
+  
+- A syntax highlighter (see the `asciidoctor-pdf` [docs](https://asciidoctor.org/docs/asciidoctor-pdf/#install-a-syntax-highlighter-optional) for options and instructions)
 
 - `pdfnup` (to create a two-sided version of the pdf - I find this easier to read at a glance for longer documents)
 
