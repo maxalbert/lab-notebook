@@ -22,7 +22,7 @@ My key considerations were:
 
   **Note:** Installing ruby via Homebrew caused problems for me on Mac OS X. I found [these instructions](http://usabilityetc.com/articles/ruby-on-mac-os-x-with-rvm/) by Jeffrey Morgan to install Ruby via `rvm` (the ruby version manager) very helpful (I think I just used the commands in section "Installing RVM and Ruby").
   
-- A syntax highlighter (see the `asciidoctor-pdf` [docs](https://asciidoctor.org/docs/asciidoctor-pdf/#install-a-syntax-highlighter-optional) for options and instructions)
+- A syntax highlighter, for example `rouge` (see the `asciidoctor-pdf` [docs](https://asciidoctor.org/docs/asciidoctor-pdf/#install-a-syntax-highlighter-optional) for options and installation instructions). If you choose a different syntax highlighter then you need to tweak the configuration setting in `convert.py` accordingly.
 
 - `pdfnup` (to create a two-sided version of the pdf - I find this easier to read at a glance for longer documents)
 
