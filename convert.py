@@ -32,6 +32,7 @@ preamble = textwrap.dedent("""
     :description: Example AsciiDoc document
     :keywords: AsciiDoc
     :imagesdir: ./images
+    :source-highlighter: rouge
 
     """)
 
